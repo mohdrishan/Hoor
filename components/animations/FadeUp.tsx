@@ -12,7 +12,7 @@ interface Props {
 }
 
 // Shared transition factory — avoids recreating objects on every render
-const makeTransition = (duration, delay) => ({
+const makeTransition = (duration: number, delay: number) => ({
   duration,
   delay,
   ease: [0.25, 0.1, 0.25, 1] as const,
