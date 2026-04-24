@@ -1,0 +1,63 @@
+HOOR — Install & Run Instructions
+===================================
+
+IMPORTANT: Do NOT run "npm audit fix --force". It downgrades Next.js to version 9
+and breaks the entire project. The audit warnings shown are from Next.js internals
+and do not affect your site's security as a frontend-only application.
+
+─── CORRECT STEPS ───────────────────────────────────────────────
+
+1. Open the hoor-final folder in VS Code
+
+2. Open terminal and run:
+
+   npm install
+
+3. Start development server:
+
+   npm run dev
+
+4. Open http://localhost:3000
+
+─── BUILD FOR PRODUCTION ────────────────────────────────────────
+
+   npm run build
+   npm start
+
+─── DEPLOY TO VERCEL ────────────────────────────────────────────
+
+Option A (recommended — automatic):
+  Push this folder to GitHub, then connect to vercel.com.
+  Vercel detects Next.js automatically. Zero config needed.
+
+Option B (CLI):
+  npx vercel --prod
+
+─── IF YOUR NODE_MODULES IS BROKEN ─────────────────────────────
+
+If you ran "npm audit fix --force" and broke things, restore with:
+
+  rmdir /s /q node_modules    (Windows)
+  del package-lock.json
+  npm install
+
+─── ADDING YOUR IMAGES ──────────────────────────────────────────
+
+Put images in the public/images/ folder:
+
+  logo.png          Already included
+  hero.jpg          Home page background     1920x1080px
+  about-hero.jpg    Story section            1200x1600px
+  collection-1.jpg  through collection-9.jpg  900x1200px each
+  lookbook-1.jpg    through lookbook-9.jpg    1000x1300px each
+  og-image.jpg      Social share preview      1200x630px
+
+─── CONTACT DETAILS (already configured) ────────────────────────
+
+  Owner:     Shiza Ishel
+  Phone:     +91 88676 69549
+  Email:     shizaishel01@gmail.com
+  Instagram: @hoor.ind
+  WhatsApp:  +918867669549
+
+To change any of these, edit: lib/constants.ts
