@@ -12,10 +12,10 @@ interface Props {
 }
 
 // Shared transition factory — avoids recreating objects on every render
-const makeTransition = (duration: number, delay: number) => ({
+const makeTransition = (duration, delay) => ({
   duration,
   delay,
-  ease: [0.16, 1, 0.3, 1] as number[],
+  ease: [0.25, 0.1, 0.25, 1] as const,
 })
 
 export function FadeUp({ children, delay = 0, duration = 1.0, className, y = 36 }: Props) {
