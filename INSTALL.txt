@@ -1,0 +1,58 @@
+HOOR — Setup & Deployment Guide
+=================================
+
+─── QUICK START (Development) ───────────────────────────────────
+
+1. Open the Hoor folder in VS Code
+
+2. Install dependencies:
+   npm install
+
+3. Start dev server:
+   npm run dev
+
+4. Open http://localhost:3000
+
+─── DEPLOY TO VERCEL (Recommended) ─────────────────────────────
+
+Option A — GitHub (easiest):
+  1. Push this folder to a new GitHub repo
+  2. Go to vercel.com → New Project → Import from GitHub
+  3. Vercel auto-detects Next.js. Click Deploy.
+  4. Add environment variable in Vercel dashboard:
+       NEXT_PUBLIC_SITE_URL = https://your-domain.com
+
+Option B — Vercel CLI:
+  npx vercel --prod
+
+─── ENVIRONMENT VARIABLES ───────────────────────────────────────
+
+Set these in Vercel → Project Settings → Environment Variables:
+
+  NEXT_PUBLIC_SITE_URL    Your live domain (e.g. https://hoor.in)
+
+─── REPLACE THE HERO IMAGE ──────────────────────────────────────
+
+The hero.jpg in public/images/ is a placeholder.
+Replace it with your own photo at 1920×1080px for best results.
+
+Other images you can add:
+  public/images/about-hero.jpg    About page header    1200×1600px
+  public/images/og-image.jpg      Social share card    1200×630px  ✓ included
+
+─── CONTACT DETAILS ─────────────────────────────────────────────
+
+To update contact info, edit: lib/constants.ts
+
+  Current settings:
+    Owner:     Shiza Ishel
+    WhatsApp:  +91 78991 09549
+    Email:     hoor.ind1@gmail.com
+    Instagram: @hoor.ind
+
+─── IMPORTANT NOTES ─────────────────────────────────────────────
+
+• Do NOT run "npm audit fix --force" — it can downgrade Next.js
+• Checkout is handled via WhatsApp (no payment gateway needed)
+• node_modules/ and .next/ are gitignored — never push them
+
